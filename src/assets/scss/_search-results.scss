@@ -1,0 +1,228 @@
+
+.circle-icon {
+	@extend .noselect;
+
+	display: block;
+	height: 40px;
+	width: 40px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	border: 1px solid black;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 38px;
+}
+
+span.appt-status-o,
+span.appt-status-a,
+span.appt-status-c,
+span.appt-status-C,
+span.appt-status-d,
+span.appt-status-j,
+span.appt-status-I,
+span.appt-status-O,
+span.appt-status-r,
+span.appt-status-s,
+span.appt-status-t,
+span.appt-status-T,
+span.status-p,
+span.status-c,
+span.status-C,
+span.status-P,
+span.status-h,
+span.status-r,
+span.status-s,
+span.status-a,
+span.status-t {
+	@extend .circle-icon;
+
+	color: $white-color-1;
+}
+
+span.inspection-type-my,
+span.inspection-type-p,
+span.inspection-type-d,
+span.inspection-type-l,
+span.inspection-type-t,
+span.inspection-type-h,
+span.inspection-type-m,
+span.inspection-type-n {
+	@extend .circle-icon;
+}
+
+/* stylelint-disable rule-empty-line-before */
+
+span.appt-status-o {
+	background-color: $appt-status-o;
+	border: 1px solid $appt-status-o;
+}
+span.appt-status-a {
+	background-color: $appt-status-a;
+	border: 1px solid $appt-status-a;
+}
+span.appt-status-c {
+	background-color: $appt-status-c;
+	border: 1px solid $appt-status-c;
+}
+span.appt-status-C {
+	background-color: $appt-status-C;
+	border: 1px solid $appt-status-C;
+}
+span.appt-status-d {
+	background-color: $appt-status-d;
+	border: 1px solid $appt-status-d;
+}
+span.appt-status-j {
+	background-color: $appt-status-j;
+	border: 1px solid $appt-status-j;
+}
+span.appt-status-I {
+	background-color: $appt-status-I;
+	border: 1px solid $appt-status-I;
+}
+span.appt-status-O {
+	background-color: $appt-status-O;
+	border: 1px solid $appt-status-O;
+}
+span.appt-status-r {
+	background-color: $appt-status-r;
+	border: 1px solid $appt-status-r;
+}
+span.appt-status-s {
+	background-color: $appt-status-s;
+	border: 1px solid $appt-status-s;
+}
+span.appt-status-t {
+	background-color: $appt-status-t;
+	border: 1px solid $appt-status-t;
+}
+span.appt-status-T {
+	background-color: $appt-status-T;
+	border: 1px solid $appt-status-T;
+}
+
+span.status-p {
+	background-color: $status-p;
+	border: 1px solid $status-p;
+}
+span.status-c {
+	background-color: $status-c;
+	border: 1px solid $status-c;
+}
+span.status-C {
+	background-color: $status-C;
+	border: 1px solid $status-C;
+}
+span.status-P {
+	background-color: $status-P;
+	border: 1px solid $status-P;
+}
+span.status-h {
+	background-color: $status-h;
+	border: 1px solid $status-h;
+}
+span.status-r {
+	background-color: $status-r;
+	border: 1px solid $status-r;
+}
+span.status-s {
+	background-color: $status-s;
+	border: 1px solid $status-s;
+}
+span.status-a {
+	background-color: $status-a;
+	border: 1px solid $status-a;
+}
+span.status-t {
+	background-color: $status-t;
+	border: 1px solid $status-t;
+}
+
+span.status-btn:hover {
+	background-color: $bg-4;
+}
+span.status-btn.status-p:hover {
+	color: $status-p;
+	border: 1px solid $status-p;
+}
+span.status-btn.status-c:hover {
+	color: $status-c;
+	border: 1px solid $status-c;
+}
+span.status-btn.status-C:hover {
+	color: $status-C;
+	border: 1px solid $status-C;
+}
+span.status-btn.status-P:hover {
+	color: $status-P;
+	border: 1px solid $status-P;
+}
+span.status-btn.status-h:hover {
+	color: $status-h;
+	border: 1px solid $status-h;
+}
+span.status-btn.status-r:hover {
+	color: $status-r;
+	border: 1px solid $status-r;
+}
+span.status-btn.status-s:hover {
+	color: $status-s;
+	border: 1px solid $status-s;
+}
+span.status-btn.status-a:hover {
+	color: $status-a;
+	border: 1px solid $status-a;
+}
+span.status-btn.status-t:hover {
+	color: $status-t;
+	border: 1px solid $status-t;
+}
+
+.results-actions .fa-file-excel-o {
+	margin-right: 10px;
+}
+
+.results-count {
+	font-weight: bold;
+}
+
+.request-search {
+	table tr th.row-confirmation-number { width: 8%; }
+	table tr th.row-status { width: 7%; }
+	table tr th.row-type { width: 6%; }
+	table tr th.row-customer { width: 10%; }
+	table tr th.row-name { width: 10%; }
+	table tr th.row-year { width: 6%; }
+	table tr th.row-make { width: 9%; }
+	table tr th.row-model { width: 9%; }
+	table tr th.row-vin { width: 8%; }
+	table tr th.row-city { width: 10%; }
+	table tr th.row-state { width: 6%; }
+	table tr th.row-phone { width: 11%; }
+}
+
+/* stylelint-enable rule-empty-line-before */
+
+.search-results {
+	table {
+		white-space: nowrap;
+
+		tbody {
+			tr:hover {
+				background-color: $bg-1;
+				cursor: pointer;
+			}
+		}
+
+		th,
+		td {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}

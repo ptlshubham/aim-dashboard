@@ -1,0 +1,101 @@
+<app-header></app-header>
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-md-2 col-sm-1"></div>
+    <div class="col-lg-4 col-md-8 login-box col-sm-10">
+
+      <div class="col-lg-12 login-form">
+        <div class="col-lg-12 login-form" style="margin-top: 15% !important;">
+          <form>
+            <div class="form-group">
+              <label class="form-control-label">Username</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label class="form-control-label">Password</label>
+              <input type="password" class="form-control" i>
+            </div>
+
+            <div class="col-lg-12 loginbttm">
+              <div class="row">
+                <div class="mr-auto login-btm login-button">
+                  <a type="submit" class="link" style="padding-right: 10px; text-decoration: none !important;">Reset
+                    Password</a>
+                  <button type="submit" class="btn btn-warning" style="margin-right: 5% !important;color:white">LOG
+                    IN</button>
+                </div>
+
+              </div>
+              <div class="col-lg-6 login-btm login-text">
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-lg-4 col-md-2 col-sm-1"></div>
+  </div>
+</div> -->
+
+<!-- <div class="state-button-container" layout="row" layout-align="space-between end">
+  <div layout="column" flex-grow="20">
+    <md-input-container class="states-container" md-no-float>
+      <md-select name="state" placeholder="State" ng-model="states" class="md-no-underline" multiple="true"
+        md-selected-text="statesDisplay(10)" md-on-close="updateStates()">
+        <md-option ng-value="'All States'">All States</md-option>
+        <md-option ng-repeat="(key, value) in STATES" ng-value="key">
+          {{value.name}} - {{key}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div class="last-refreshed-at" layout="column" layout-align="end end" flex="60">
+    <div layout="row" layout-align="space-between center">
+      <span>Last updated: {{lastUpdatedAt}}</span>
+      <md-icon md-svg-icon="refresh" ng-click="manuallyUpdateCounts()"></md-icon>
+    </div>
+  </div>
+</div>
+
+<div id="search-container" class="dashboard-search-container">
+  <div id="dashboard" layout="column">
+    <div id="icon-container">
+      <div class="dashboard-container">
+        <div class="dashboard-box-container" ng-repeat="dashboard in dashboards"
+          ng-if="!dashboard.showFn || dashboard.showFn(dashboard.name)">
+          <div class="wrapper">
+            <div class="icon-wrapper-shadow"></div>
+            <div class="icon-wrapper {{::dashboard.className}}">
+              <md-icon ng-click="viewDashboard(dashboard.dashboardName)" md-svg-icon="{{::dashboard.icon}}"></md-icon>
+            </div>
+            <div class="dashboard-box" ng-click="viewDashboard(dashboard.dashboardName)">
+              <div class="dashboard-label {{::dashboard.className}}">
+                {{::dashboard.name}}
+              </div>
+              <div class="dashboard-count">{{dashboard.dashboardCount}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="dashboard-results-container" ui-view="">
+    </div>
+  </div>
+</div> -->
+
+<mat-form-field appearance="fill">
+  <mat-label>Toppings</mat-label>
+  <mat-select [formControl]="toppings" multiple>
+    <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+
+
+<app-footer></app-footer>

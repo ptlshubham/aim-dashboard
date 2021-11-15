@@ -1,0 +1,178 @@
+/* stylelint-disable at-rule-empty-line-before */
+// @import "../../../node_modules/angular-material/angular-material.scss";
+
+/* AiM colors: */
+/* Tabs-hover */
+$primary-1: #253266;
+/* Header, Footer, Icons, Tabs, Cards, Text */
+$primary-2: #2f3a81;
+/* Dialogs, Text field - focused */
+$primary-3: #3c5497;
+/* Sub-title-hover */
+$primary-4: #96a6cb;
+$primary-5: #c5d0e8;
+
+/* Buttons-hover, Tabs-hover */
+$secondary-1: #cb932e;
+/* Buttons, Tabs, Text */
+$secondary-2: #dba53b;
+$secondary-3: #dbb26a;
+$secondary-4: #e5c697;
+/* Data header row */
+$secondary-5: #eadbc3;
+
+/* Text colors: */
+/* Dark text on light background */
+/* Title, Primary text */
+$dark-color-1: rgba(0, 0, 0, 0.87);
+/* Hint text, Icons */
+$dark-color-2: rgba(0, 0, 0, 0.54);
+/* Disabled text */
+$dark-color-3: rgba(0, 0, 0, 0.38);
+/* Dividers */
+$dark-color-4: rgba(0, 0, 0, 0.12);
+
+/* White text on dark background */
+/* Title, Primary text */
+$white-color-1: rgba(255, 255, 255, 1);
+/* Hint text, Icons */
+$white-color-2: rgba(255, 255, 255, 0.7);
+/* Disabled text */
+$white-color-3: rgba(255, 255, 255, 0.5);
+/* Dividers */
+$white-color-4: rgba(255, 255, 255, 0.21);
+
+/* Background colors */
+$bg-1: #e0e0e0;
+$bg-2: #f5f5f5;
+$bg-3: #fcfcfc;
+$bg-4: white;
+
+/* Request Status colors */
+/* Pending */
+$status-p: #1976d2;
+/* Cancel */
+$status-c: #d32f2f;
+/* Completed */
+$status-C: #689f38;
+/* Potential */
+$status-P: #616161;
+/* On Hold */
+$status-h: #5d4037;
+/* Review */
+$status-r: #fbc02d;
+/* Scheduled */
+$status-s: #303f9f;
+/* ATL Review */
+$status-a: #f57c00;
+/* Tech Review */
+$status-t: #f57c00;
+
+/* Appointment status colors */
+/* Open */
+$appt-status-o: $status-p;
+/* Acknowledged */
+$appt-status-a: #0097a7;
+/* Cancelled */
+$appt-status-c: $status-c;
+/* Complete */
+$appt-status-C: $status-C;
+/* Dispatched */
+$appt-status-d: $status-P;
+/* In Jeopardy */
+$appt-status-j: $status-r;
+/* Incomplete */
+$appt-status-I: $status-a;
+/* On Site */
+$appt-status-O: #c2185b;
+/* Rejected */
+$appt-status-r: #e64a19;
+/* Scheduled */
+$appt-status-s: $status-s;
+/* Tentative */
+$appt-status-t: $status-h;
+/* Travel */
+$appt-status-T: #ffa000;
+
+$content-max-width: 1200px;
+
+$warning: $status-c;
+
+$excel: #207345;
+
+$active: $status-C;
+
+$error-red: #ef2a2a;
+
+$focus-underline: #4f5bb9;
+
+$opacity: 0.26;
+
+$transition-duration: 0.4s;
+
+$transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+
+$md-invalid: rgb(221, 44, 0);
+
+$solid-gray: #9e9e9e;
+
+@mixin input-placeholder-color($color) {
+	$pseudos:
+	'::-webkit-input-placeholder', ':-moz-placeholder', '::-moz-placeholder',
+	':-ms-input-placeholder', '::-ms-input-placeholder', ':placeholder-shown';
+
+	@each $pseudo in $pseudos {
+		&#{$pseudo} {
+			color: $color;
+			opacity: 1;
+		}
+	}
+}
+
+@import 'reset';
+
+@import 'md-reset';
+
+@import 'md-icons';
+
+@import 'header';
+
+@import 'dashboard';
+
+@import 'content';
+
+@import 'tabs';
+
+@import 'search';
+
+@import 'search-results';
+
+@import 'pagination';
+
+@import 'details';
+
+@import 'footer';
+
+@import 'login';
+
+@import 'messages';
+
+@import 'inspection-request';
+
+@import 'dialogs';
+
+@import 'color-dropdown';
+
+@import 'global';
+
+@import 'organization-search';
+
+@import 'organization-details';
+
+@import 'organization/add';
+
+@import 'organization/organizations-select';
+
+@import 'lightbox';
+
+@import '_spinner';

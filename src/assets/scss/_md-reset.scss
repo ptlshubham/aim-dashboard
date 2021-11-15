@@ -1,0 +1,128 @@
+button.md-button.md-raised.md-primary,
+button.md-button.md-raised.md-primary:not([disabled]) {
+	color: $white-color-1;
+	background-color: $secondary-2;
+}
+
+button.md-button.md-raised.md-primary:hover:not([disabled]) {
+	background-color: $primary-2;
+}
+
+button.md-button.md-raised.md-primary[disabled] {
+	/* stylelint-disable declaration-no-important */
+	color: #ffffff !important;
+	/* stylelint-enable declaration-no-important */
+	opacity: $opacity;
+}
+
+.results-actions button.md-button.md-raised:not([disabled]) {
+	color: $white-color-1;
+	padding: 0 20px;
+}
+
+button.results-export.md-button.md-raised:not([disabled]) {
+	background-color: $excel;
+}
+
+/* Datepicker */
+.md-datepicker {
+	min-height: 65px;
+	max-width: 320px;
+	background-color: transparent;
+
+	.md-datepicker-input {
+		font-size: 16px;
+	}
+
+	.md-datepicker-button.md-icon-button {
+		z-index: 2;
+		float: right;
+		margin: 15px -5px -30px 0;
+	}
+
+	.md-icon-button + .md-datepicker-input-container {
+		float: left;
+		width: 100%;
+		margin: 0;
+	}
+
+	.md-datepicker-input-mask-opaque {
+		background-color: transparent;
+	}
+}
+
+/* Inputs */
+.md-input-container {
+	min-width: 180px;
+}
+
+.light-background {
+	.md-select .md-select-value.md-select-placeholder {
+		color: $dark-color-3;
+	}
+
+	.md-input-container label:not([disabled]) {
+		color: $dark-color-3;
+	}
+
+	input[disabled] {
+		color: $dark-color-2;
+	}
+
+	.md-select[disabled] .md-select-value:not(.md-select-placeholder) {
+		color: $dark-color-2;
+	}
+
+	input {
+		@include input-placeholder-color($dark-color-3);
+	}
+}
+
+.dark-background {
+	.md-select .md-select-value.md-select-placeholder {
+		color: $white-color-3;
+	}
+
+	.md-input-container label:not([disabled]) {
+		color: $white-color-3;
+	}
+
+	input[disabled] {
+		color: $white-color-2;
+	}
+
+	.md-select[disabled] .md-select-value:not(.md-select-placeholder) {
+		color: $white-color-2;
+	}
+
+	input {
+		@include input-placeholder-color($white-color-3);
+	}
+}
+
+/* Placeholders */
+input.ng-touched.ng-invalid-required {
+	@include input-placeholder-color($md-invalid);
+}
+/* END Placeholders */
+
+.md-checkbox .md-label {
+	color: $dark-color-2;
+}
+
+.md-toast.crm-custom-toast {
+	position: fixed;
+
+	.md-icon {
+		margin-right: 10px;
+	}
+}
+
+.md-option:hover {
+	background-color: $bg-2;
+}
+
+.md-checkbox.md-default-theme:not([disabled]).md-primary.md-checked .md-icon,
+.md-checkbox:not([disabled]).md-primary.md-checked .md-icon {
+	background-color: black;
+}

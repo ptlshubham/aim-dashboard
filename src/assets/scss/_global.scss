@@ -1,0 +1,189 @@
+.global-container {
+	overflow: hidden;
+}
+
+.md-button.md-primary.add-more {
+	color: $primary-2;
+	font-size: 14px;
+	font-weight: 500;
+	margin-left: 0;
+
+	.md-icon {
+		margin: 0;
+	}
+}
+
+.crm-disabled {
+	opacity: $opacity;
+}
+
+.validation-messages {
+	@extend .warning;
+
+	font-size: 12px;
+	margin: 5px 0;
+}
+
+.card-background-thingy {
+	padding: 15px;
+	margin-bottom: 10px;
+	position: relative;
+	border-bottom-right-radius: 3px;
+	border-left: 6px $secondary-2 solid;
+	background-color: white;
+}
+
+.md-input-container {
+	&.no-margin-top {
+		margin-top: 0;
+	}
+
+	&.no-.md-errors-spacer {
+		margin-bottom: 0;
+
+		.md-errors-spacer {
+			display: none;
+		}
+	}
+}
+
+.crm-gray-font {
+	color: $dark-color-2;
+}
+
+.crm-form-font-color {
+	color: $dark-color-3;
+}
+
+.crm-offset-40 {
+	padding-left: 40px;
+}
+
+.md-menu-item button {
+	.md-icon svg {
+		fill: currentColor;
+	}
+
+	&:disabled .md-icon svg {
+		fill: rgba(0, 0, 0, 0.26);
+	}
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.hide-button-not-hovered:not(:hover) button.md-icon-button {
+	opacity: 0;
+}
+
+.ng-untouched ~ .md-input-messages-animation {
+	opacity: 0;
+}
+
+.disposition-call-types,
+.appointment-days {
+	margin-bottom: 15px;
+
+	@extend .noselect;
+
+	label {
+		cursor: pointer;
+		min-width: 60px;
+		color: $dark-color-2;
+		border: 1px solid $dark-color-2;
+		padding: 5px 10px;
+		text-align: center;
+		overflow: hidden;
+		position: relative;
+		border-left: 0;
+		z-index: 1;
+
+		&.focused {
+			box-shadow: inset 0 0 0 2px $primary-3;
+		}
+
+		&:first-of-type {
+			border-left: 1px solid $dark-color-2;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	label.selected-call-type,
+	label.selected-day {
+		color: $white-color-1;
+		background-color: black;
+	}
+
+	input {
+		cursor: pointer;
+		z-index: 0;
+		opacity: 0;
+		position: absolute;
+	}
+}
+
+.crm-datepicker {
+	padding-left: 2px;
+
+	.md-datepicker {
+		padding-left: 2px;
+
+		input {
+			padding-left: 2px;
+		}
+	}
+
+	label.crm-datepicker-float-label {
+		color: $dark-color-2;
+		line-height: 26px;
+		font-size: 12px;
+		letter-spacing: 0.02em;
+	}
+
+	.md-datepicker.ng-invalid input {
+		color: rgb(221, 44, 0);
+	}
+
+	.md-datepicker.ng-invalid + div[role="alert"] {
+		color: rgb(221, 44, 0);
+		font-size: 12px;
+	}
+}
+
+label {
+	&.input-label-.md-input {
+		margin-top: 20px;
+	}
+
+	&.input-label-.md-select {
+		margin-top: 26px;
+	}
+
+	&.input-label-.md-datepicker {
+		margin-top: 25px;
+	}
+
+	&.crm-.md-select-label {
+		top: auto;
+		/* stylelint-disable declaration-no-important */
+		opacity: 1 !important;
+		/* stylelint-enable declaration-no-important */
+	}
+}
+
+.viewers {
+	position: absolute;
+	margin: -45px 0 0 30px;
+
+	.md-icon svg {
+		fill: $solid-gray;
+	}
+}
+
+.input-counter {
+	color: $solid-gray;
+}

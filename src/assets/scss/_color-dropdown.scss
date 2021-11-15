@@ -1,0 +1,53 @@
+
+.vehicle-color-label {
+	padding-right: 20px;
+	padding-left: 20px;
+	position: relative;
+	top: 12px;
+}
+
+.vehicle-color-display {
+	padding-left: 20px;
+}
+
+.vehicle-color-dropdown-color {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+
+.vehicle-color-dropdown-border {
+	border: 1px solid black;
+}
+
+.vehicle-color-dropdown-diagonal-line::before {
+	content: "";
+	position: relative;
+	bottom: 21%;
+	left: 48.5%;
+	width: 1px;
+	height: 142%;
+	background: red;
+	display: block;
+	transform: rotate(45deg);
+}
+
+.vehicle-color-dropdown-question-mark::before {
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	position: relative;
+	left: 6px;
+	top: -1px;
+	content: "?";
+}
+
+.color-dropdown-focus {
+	border-bottom: 2px solid transparent;
+}
+
+.color-dropdown-focus:focus {
+	border-bottom: 2px solid $focus-underline;
+}

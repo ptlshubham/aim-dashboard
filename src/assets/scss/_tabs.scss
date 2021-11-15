@@ -1,0 +1,47 @@
+.tabs-menu {
+	position: relative;
+	height: 30px;
+	float: left;
+	clear: both;
+	margin-left: 100px;
+	top: -54px;
+
+	li {
+		list-style-type: none;
+		float: left;
+		background-color: $primary-2;
+		padding: 10px 20px;
+		transition: background-color $transition-duration $transition-timing-function;
+
+		&:hover {
+			cursor: pointer;
+			background-color: $primary-1;
+
+			a {
+				color: $white-color-2;
+				transition: color $transition-duration $transition-timing-function;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			color: $white-color-1;
+			font-weight: bold;
+		}
+	}
+
+	li:not(:first-child) {
+		margin-left: 10px;
+	}
+
+	li.tab-selected {
+		position: relative;
+		background-color: $secondary-2;
+		cursor: default;
+
+		&:hover a {
+			color: white;
+			cursor: default;
+		}
+	}
+}

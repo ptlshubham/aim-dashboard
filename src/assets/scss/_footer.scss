@@ -1,0 +1,21 @@
+
+footer.global-footer {
+	width: 100%;
+	background-color: $primary-2;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	p {
+		color: $white-color-1;
+	}
+}
+
+/* Keep Footer At Bottom of Page */
+.global-container {
+	min-height: 100%;
+	position: relative;
+	/* IE 11 Fix: Clicking on method of contact filed causes issue on the page background IE 11 */
+	background-color: $bg-4;
+}

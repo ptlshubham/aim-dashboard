@@ -1,0 +1,99 @@
+.md-icon svg {
+	fill: $primary-2;
+}
+
+.search-icon svg {
+	fill: $dark-color-2;
+}
+
+form#nav-search .search-icon svg {
+	fill: $white-color-2;
+}
+
+.star-icon svg {
+	fill: $secondary-2;
+}
+
+.copy-icon svg,
+.file-excel-icon svg {
+	fill: $white-color-1;
+}
+
+.details-content {
+	p .md-icon {
+		margin-right: 10px;
+	}
+
+	.section-header .md-icon svg {
+		fill: $white-color-1;
+	}
+
+	.internal-comments svg {
+		fill: $dark-color-2;
+	}
+}
+
+.star-icon {
+	width: 18px;
+	height: 18px;
+	margin-left: 10px;
+}
+
+.copy-icon,
+.file-excel-icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 10px;
+}
+
+nav {
+	svg {
+		fill: $white-color-1;
+	}
+
+	.person-icon {
+		width: 36px;
+		height: 36px;
+	}
+}
+
+.back-results .md-icon {
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin-right: 20px;
+}
+
+.info-content svg {
+	fill: $dark-color-2;
+}
+
+.pagination .disabled svg {
+	fill: $dark-color-3;
+}
+
+.md-toolbar svg {
+	fill: $white-color-1;
+}
+
+.crm-custom-toast svg {
+	fill: $white-color-1;
+}
+
+.crm-icon-margin-top {
+	margin-top: 25px;
+}
+
+.md-datepicker-calendar-icon svg {
+	fill: $dark-color-2;
+}
+
+.hide-button-not-hovered button {
+	svg {
+		fill: $dark-color-2;
+	}
+}
+
+.visibility-icon svg {
+	fill: $solid-gray;
+}

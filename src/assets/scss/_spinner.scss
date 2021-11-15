@@ -1,0 +1,44 @@
+
+$spinner-offset: 187;
+$spinner-duration: 1.4s;
+
+.search-spinner {
+	text-align: center;
+	animation: rotator $spinner-duration linear infinite;
+	margin-bottom: 150px;
+}
+
+@keyframes rotator {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(270deg); }
+}
+
+.path {
+	stroke-dasharray: $spinner-offset;
+	stroke-dashoffset: 0;
+	transform-origin: center;
+	animation: dash $spinner-duration ease-in-out infinite, colors ($spinner-duration * 2) ease-in-out infinite;
+}
+
+@keyframes colors {
+	0% { stroke: $primary-2; }
+	40% { stroke: $primary-2; }
+	60% { stroke: $secondary-2; }
+	100% { stroke: $secondary-2; }
+}
+
+@keyframes dash {
+	0% {
+		stroke-dashoffset: $spinner-offset;
+	}
+
+	50% {
+		stroke-dashoffset: $spinner-offset * 0.25;
+		transform: rotate(135deg);
+	}
+
+	100% {
+		stroke-dashoffset: $spinner-offset;
+		transform: rotate(450deg);
+	}
+}

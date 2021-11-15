@@ -1,0 +1,25 @@
+.crm-warning {
+	@extend .warning;
+
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 100px;
+}
+
+.toast-container-bounds {
+	padding-top: 80px;
+}
+
+.warning {
+	/* stylelint-disable declaration-no-important */
+	color: $warning !important;
+	/* stylelint-enable declaration-no-important */
+}
+
+.inline-warning {
+	@extend .warning;
+
+	padding: 15px;
+	text-align: center;
+}
