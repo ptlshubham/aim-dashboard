@@ -6,10 +6,13 @@ import { AppComponent } from './app.component';
 import { MainModule } from './main/main.module';
 import { SharedModule } from './shared/shared.module';
 import { UserModule } from './user/user.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRoutes } from './app-routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+import { MatNativeDateModule } from '@angular/material/core';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent
@@ -23,9 +26,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MainModule,
     UserModule,
     SharedModule,
+    MaterialModule,
     BrowserAnimationsModule,
-    MatSelectModule,
-    MatIconModule
+    HttpClientModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
