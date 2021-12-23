@@ -6,6 +6,7 @@ import { UserRoutes } from './user.routing';
 import { MainModule } from '../main/main.module';
 import { SharedModule } from '../shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -17,8 +18,10 @@ import { BrowserModule } from '@angular/platform-browser';
   imports: [
     CommonModule,
     MainModule,
+    FormsModule,
     SharedModule,
     RouterModule.forChild(UserRoutes)
-  ]
+  ],
+
 })
 export class UserModule { }
