@@ -7,26 +7,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./globalheader.component.scss']
 })
 export class GlobalheaderComponent implements OnInit {
-  dashactive:any;
-  reqactive:any;
+  dashactive: any;
+  tryFlag: Boolean = false;
+  reqactive: any;
   constructor(
-    private router:Router
+    private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.reqactive='active';
+    this.reqactive = 'is-active';
   }
-  logout(){
+  logout() {
     this.router.navigate(['user/login'])
   }
-  openDashboard(){
-    this.dashactive = 'active';
-    this.reqactive='false';
+  openDashboard() {
+    this.dashactive = 'is-active';
+    this.reqactive = 'false';
   }
-  openRequest(){
+  openRequest() {
     debugger
-    // this.reqactive='active';
-    // this.dashactive = 'false';
+    this.reqactive = 'is-active';
+    this.dashactive = 'false';
+    this.tryFlag = true;
   }
 
 }

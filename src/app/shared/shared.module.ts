@@ -4,6 +4,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { GlobalheaderComponent } from './globalheader/globalheader.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,10 +15,12 @@ import { GlobalheaderComponent } from './globalheader/globalheader.component';
     GlobalheaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,
+    
     FooterComponent,
     MatIconModule,
     GlobalheaderComponent

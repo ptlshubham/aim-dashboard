@@ -7,10 +7,11 @@
 
   </div>
 </nav> -->
-<nav class="navbar navbar-dark navbar-expand-sm fixed-top" style="background-color: #2f3a81;">
-  <div class="container">
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top" style="background-color: #2f3a81;" >
+  <div class="container" style="margin:5% 5% 5% 5% !important; display: contents !important">
+    <div style="padding-left: 1.5% !important;">
     <div id="brand-logo"><img src="../../../assets/img/logo.png" alt="AiM logo"></div>
-
+  </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,7 +21,7 @@
       <ul id="navbar-list" >
         <li class="navbar-item">
           <span [ngClass]="dashactive" (click)="openDashboard()">
-            <a href="" class="navbar-link">
+            <a class="navbar-link">
               Dashboard
             </a>
           </span>
@@ -28,7 +29,7 @@
         </li>
         <li class="navbar-item" >
           <span  [ngClass]="reqactive" (click)="openRequest()">
-            <a href="" class="navbar-link">
+            <a class="navbar-link">
               Request
             </a>
           </span>
