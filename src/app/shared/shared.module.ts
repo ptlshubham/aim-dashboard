@@ -3,13 +3,15 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { GlobalheaderComponent } from './globalheader/globalheader.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    GlobalheaderComponent
   ],
   imports: [
     CommonModule
@@ -17,7 +19,9 @@ import { MatIconModule } from '@angular/material/icon';
   exports: [
     HeaderComponent,
     FooterComponent,
-    MatIconModule
+    MatIconModule,
+    GlobalheaderComponent
+
   ]
 })
 export class SharedModule { }

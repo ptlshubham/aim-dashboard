@@ -16,18 +16,18 @@
     </button>
 
 
-    <!-- <div id="navbarCollapse" class="collapse navbar-collapse">
-      <ul id="navbar-list">
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+      <ul id="navbar-list" >
         <li class="navbar-item">
-          <span>
+          <span [ngClass]="dashactive" (click)="openDashboard()">
             <a href="" class="navbar-link">
               Dashboard
             </a>
           </span>
 
         </li>
-        <li class="navbar-item">
-          <span>
+        <li class="navbar-item" >
+          <span  [ngClass]="reqactive" (click)="openRequest()">
             <a href="" class="navbar-link">
               Request
             </a>
@@ -38,16 +38,16 @@
     <form class="form-inline">
       <i class="fa fa-search iconc" aria-hidden="true"></i>
     </form>
-    <form class="form-inline">-->
-      <!-- <input class="form-controls mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <form class="form-inline">
+      <!-- <input class="form-controls mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
       <input class="form-controls custom-h mr-sm-2"
         style="color:rgba(255, 255, 255, 1);border-color:rgba(255, 255, 255, 1);border-top: none; border-left: none; border-right: none;"
         type="search" placeholder="Search" aria-label="Search">
 
     </form>
-    <form class="form-inline">
+    <form class="form-inline" (click)="logout()">
       <i class="fa fa-user iconc" aria-hidden="true"></i>
-    </form> --> 
+    </form>
 
 
 
