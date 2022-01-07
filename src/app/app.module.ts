@@ -14,6 +14,7 @@ import { MainModule } from './main/main.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './auth/auth-http-interceptor';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { InspectionRequestModule } from './inspection-request/inspection-request.module';
 
 // Material imports end
 
@@ -33,9 +34,11 @@ import { DashboardModule } from './dashboard/dashboard.module';
 		MaterialModule,
 		MainModule,
 		FlexLayoutModule,
-		SharedModule
+		SharedModule,
 		
-	
+	],
+	exports:[
+		SharedModule
 	],
 	providers: [
 		{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

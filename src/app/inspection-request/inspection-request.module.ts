@@ -1,16 +1,16 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { TabSearchComponent } from './tab-search/tab-search.component';
+import { CommonModule } from "@angular/common";
+import { HttpClientModule } from "@angular/common/http";
+import { NgModule } from "@angular/core";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { MatNativeDateModule } from "@angular/material/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { RouterModule } from "@angular/router";
+import { MaterialModule } from "../material.module";
+import { SharedModule } from "../shared/shared.module";
+import { InspectionRequestRoutes } from "./inspection-request.routing";
+import { TabSearchComponent } from "./tab-search/tab-search.component";
 
-import { MatNativeDateModule } from '@angular/material/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from '../material.module';
-import { SharedModule } from '../shared/shared.module';
-import { RouterModule } from '@angular/router';
-import { InspectionRequestRoutes } from './inspection-request.routing';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -20,14 +20,15 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     CommonModule,
-	RouterModule.forChild(InspectionRequestRoutes),
-	FormsModule,
+    FormsModule,
     SharedModule,
+    RouterModule.forChild(InspectionRequestRoutes),
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatNativeDateModule,
+    ReactiveFormsModule,
   ]
 })
 export class InspectionRequestModule { }

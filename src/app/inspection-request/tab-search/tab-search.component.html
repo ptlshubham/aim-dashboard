@@ -1,20 +1,16 @@
-<div>
+<app-globalheader></app-globalheader>
+<div style="margin-top: 15%;">
+
 	<div id="tab-group">
-		<ul role="tabgroup" class="tabs-menu noselect">
-			<li class="tab-selected"
-				ui-sref="inspection-request/search/basic"
-				role="tab"
-			>
-			<a href="#" ui-sref="inspection-request/search/basic">Basic Search</a>
+		<ul role="tabgroup" class="tabs-menu noselect" style="padding-top: 14px;">
+			<li [ngClass]="activetabbasic" (click)="basicSearch()"  role="tab">
+				<a >Basic Search</a>
 			</li>
-			<li ng-class="{'tab-selected'($index)}"
-				ui-sref="inspection-request/search/advanced"
-				role="tab"
-			>
-			<a href="#" ui-sref="inspection-request/search/advanced">Advanced Search</a>
+			<li [ngClass]="activetabadvance" (click)="advanceSearch()"  role="tab">
+				<a  >Advanced Search</a>
 			</li>
 		</ul>
-		<div role="tabpanel" id="search-container" ui-view="">
+		<div role="tabpanel" id="search-container" ui-view="" style="padding-top: -50px;">
 		</div>
 	</div>
 </div>

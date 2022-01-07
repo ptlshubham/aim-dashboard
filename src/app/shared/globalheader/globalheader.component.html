@@ -28,11 +28,12 @@
 
 				</li>
 				<li class="navbar-item">
-					<span [ngClass]="reqactive" (mouseover)="tryFlag=true" (mouseout)="tryFlag=false" (click)="openRequest()">
+					<span [ngClass]="reqactive" (mouseover)="tryFlag=true"  (click)="openRequest()">
 						<a >
 							Request
 						</a>
-						<div *ngIf="tryFlag">
+					</span>
+						<div *ngIf="tryFlag" style="height:250px;width:200%;background-color: white;;margin-left: -30%;">
 							<ul ng-if="userHasAnyOfPermissions('queryRequest', 'createRequest')">
 								<li class="md-title">Request Management</li>
 								<li ng-if="checkPermission('queryRequest')"><a ui-sref="inspection-request/search/basic" ui-sref-opts="{ reload:true }">Search requests</a></li>
@@ -56,7 +57,7 @@
 								<li><a ui-sref="organization/add" ui-sref-opts="{ reload:true }">Add organizations</a></li>
 							</ul>
 						</div> -->
-					</span>
+					
 				</li>
 			</ul>
 		</div>
