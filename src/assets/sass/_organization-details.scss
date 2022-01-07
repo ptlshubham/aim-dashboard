@@ -1,0 +1,147 @@
+.crm-organization-details {
+	$each-side-margin: 22px;
+
+	.crm-img-content {
+		padding: 0 $each-side-margin;
+		color: $white-color-1;
+		position: absolute;
+		top: 125px;
+		font-weight: bold;
+		max-width: $content-max-width - ($each-side-margin * 2);
+		width: 100%;
+
+		.crm-title-row {
+			position: relative;
+		}
+
+		.crm-title {
+			font-size: 40px;
+		}
+
+		.crm-status {
+			color: $white-color-2;
+
+			&.crm-dot {
+				margin-left: 20px;
+				font-size: 50px;
+				font-weight: initial;
+			}
+		}
+
+		.crm-2nd-row {
+			.crm-first-word {
+				color: $secondary-2;
+				font-size: 18px;
+			}
+
+			.crm-vertical-bar {
+				margin-left: 10px;
+				font-size: 14px;
+				margin-top: -1px;
+			}
+
+			.crm-second-word {
+				margin-left: 10px;
+				font-weight: initial;
+				color: $primary-4;
+				font-size: 18px;
+			}
+		}
+
+		.crm-edit-icon {
+			position: absolute;
+			right: 0;
+			top: 26px;
+
+			svg {
+				fill: white;
+			}
+		}
+	}
+
+	#crm-organization-detail-container {
+		md-card {
+			padding: 12px;
+
+			md-card-title {
+				padding-top: 10px;
+				margin-bottom: 4px;
+				flex: 0;
+
+				md-card-title-text {
+					.md-headline {
+						font-size: initial;
+						text-transform: uppercase;
+						font-weight: bold;
+					}
+				}
+			}
+
+			.crm-blue {
+				color: $primary-1;
+			}
+
+			.crm-bullet-icon {
+				margin-top: -3px;
+				margin-right: 10px;
+			}
+		}
+
+		.crm-align-to-right {
+			float: right;
+		}
+
+		.crm-organization-code {
+			margin-bottom: 18px;
+		}
+	}
+
+	&.crm-active {
+		.crm-status {
+			color: $active;
+		}
+	}
+
+	.crm-organization-background-wrapper {
+		width: 100%;
+		text-align: center;
+
+		img {
+			width: 100%;
+			height: 270px; /* the original size */
+		}
+	}
+
+	.crm-card {
+		background-color: $bg-2;
+	}
+
+	.details-content {
+		margin-top: 10px;
+		width: 100%;
+		padding: 8px;
+
+		.request-history {
+			width: 100%;
+		}
+	}
+}
+
+.crm-html-organization-details {
+	#content-container {
+		display: none;
+	}
+
+	.global-container {
+		background-color: $bg-2;
+	}
+
+	#crm-organization-detail-container {
+		margin-top: -2px;
+	}
+}
+
+.crm-organization-left-card {
+	height: 100%;
+	display: block;
+}

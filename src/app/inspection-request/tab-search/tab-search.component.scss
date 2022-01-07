@@ -1,0 +1,100 @@
+::ng-deep .no-line .mat-form-field-underline {
+	display: none !important;
+  }
+  
+  $primary-1: #253266;
+  /* Header, Footer, Icons, Tabs, Cards, Text */
+  $primary-2: #2f3a81;
+  /* Dialogs, Text field - focused */
+  $primary-3: #3c5497;
+  /* Sub-title-hover */
+  $primary-4: #96a6cb;
+  $primary-5: #c5d0e8;
+  
+  /* Buttons-hover, Tabs-hover */
+  $secondary-1: #cb932e;
+  /* Buttons, Tabs, Text */
+  $secondary-2: #dba53b;
+  $secondary-3: #dbb26a;
+  $secondary-4: #e5c697;
+  /* Data header row */
+  $secondary-5: #eadbc3;
+  
+  /* Text colors: */
+  /* Dark text on light background */
+  /* Title, Primary text */
+  $dark-color-1: rgba(0, 0, 0, 0.87);
+  /* Hint text, Icons */
+  $dark-color-2: rgba(0, 0, 0, 0.54);
+  /* Disabled text */
+  $dark-color-3: rgba(0, 0, 0, 0.38);
+  /* Dividers */
+  $dark-color-4: rgba(0, 0, 0, 0.12);
+  
+  /* White text on dark background */
+  /* Title, Primary text */
+  $white-color-1: rgba(255, 255, 255, 1);
+  /* Hint text, Icons */
+  $white-color-2: rgba(255, 255, 255, 0.7);
+  /* Disabled text */
+  $white-color-3: rgba(255, 255, 255, 0.5);
+  /* Dividers */
+  $white-color-4: rgba(255, 255, 255, 0.21);
+  
+  /* Background colors */
+  $bg-1: #e0e0e0;
+  $bg-2: #f5f5f5;
+  $bg-3: #fcfcfc;
+  $bg-4: white;
+  
+  $overdue: #c2185b;
+  $due-today: #f57c00;
+  $awaiting-on-hold: #5d4037;
+  $open-requests: #1976d2;
+.tabs-menu {
+	position: relative;
+	height: 30px;
+	float: left;
+	clear: both;
+	margin-left: 100px;
+	top: -54px;
+
+	li {
+		list-style-type: none;
+		float: left;
+		background-color: $primary-2;
+		padding: 10px 20px;
+		// transition: background-color $transition-duration $transition-timing-function;
+
+		&:hover {
+			cursor: pointer;
+			background-color: $primary-1;
+
+			a {
+				color: $white-color-2;
+				// transition: color $transition-duration $transition-timing-function;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			color: $white-color-1;
+			font-weight: bold;
+		}
+	}
+
+	li:not(:first-child) {
+		margin-left: 10px;
+	}
+
+	li.tab-selected {
+		position: relative;
+		background-color: $secondary-2;
+		cursor: default;
+
+		&:hover a {
+			color: white;
+			cursor: default;
+		}
+	}
+}

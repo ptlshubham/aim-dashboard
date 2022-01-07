@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mt20 {
+  margin-top: 20%;
+}
+
+.mt40 {
+  margin-top: 40%;
+}
+
+.mt60 {
+  margin-top: 60%;
+}
+
+.mt80 {
+  margin-top: 80%;
+}
+
+.mt100 {
+  margin-top: 100%;
+}
+
+.mt120 {
+  margin-top: 120%;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

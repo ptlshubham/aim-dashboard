@@ -7,49 +7,74 @@
 
   </div>
 </nav> -->
-<nav class="navbar navbar-dark navbar-expand-lg fixed-top" style="background-color: #2f3a81;" >
-  <div class="container" style="margin:5% 5% 5% 5% !important; display: contents !important">
-    <div style="padding-left: 1.5% !important;">
-    <div id="brand-logo"><img src="../../../assets/img/logo.png" alt="AiM logo"></div>
-  </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top" style="background-color: #2f3a81;">
+	<div class="container" style="margin:5% 5% 5% 5% !important; display: contents !important">
+		<div style="padding-left: 1.5% !important;">
+			<div id="brand-logo"><img src="../../../assets/img/logo.png" alt="AiM logo"></div>
+		</div>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
 
-    <div id="navbarCollapse" class="collapse navbar-collapse">
-      <ul id="navbar-list" >
-        <li class="navbar-item">
-          <span [ngClass]="dashactive" (click)="openDashboard()">
-            <a class="navbar-link">
-              Dashboard
-            </a>
-          </span>
+		<div id="navbarCollapse" class="collapse navbar-collapse">
+			<ul id="navbar-list">
+				<li class="navbar-item">
+					<span [ngClass]="dashactive" (click)="openDashboard()">
+						<a class="navbar-link">
+							Dashboard
+						</a>
+					</span>
 
-        </li>
-        <li class="navbar-item" >
-          <span  [ngClass]="reqactive" (click)="openRequest()">
-            <a class="navbar-link">
-              Request
-            </a>
-          </span>
-        </li>
-      </ul>
-    </div>
-    <form class="form-inline">
-      <i class="fa fa-search iconc" aria-hidden="true"></i>
-    </form>
-    <form class="form-inline">
-      <!-- <input class="form-controls mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
-      <input class="form-controls custom-h mr-sm-2"
-        style="color:rgba(255, 255, 255, 1);border-color:rgba(255, 255, 255, 1);border-top: none; border-left: none; border-right: none;"
-        type="search" placeholder="Search" aria-label="Search">
+				</li>
+				<li class="navbar-item">
+					<span [ngClass]="reqactive" (mouseover)="tryFlag=true" (mouseout)="tryFlag=false" (click)="openRequest()">
+						<a >
+							Request
+						</a>
+						<div *ngIf="tryFlag">
+							<ul ng-if="userHasAnyOfPermissions('queryRequest', 'createRequest')">
+								<li class="md-title">Request Management</li>
+								<li ng-if="checkPermission('queryRequest')"><a ui-sref="inspection-request/search/basic" ui-sref-opts="{ reload:true }">Search requests</a></li>
+								<li ng-if="checkPermission('createRequest')"><a ui-sref="inspection-request/add" ui-sref-opts="{ reload:true }">Add request</a></li>
+							</ul>
+							<ul ng-if="userHasAnyOfPermissions('queryOrg', 'createOrg')">
+								<li class="md-title">Organization Management</li>
+								<li ng-if="checkPermission('queryOrg')"><a ui-sref="organization/search" ui-sref-opts="{ reload:true }">Search organizations</a></li>
+								<li ng-if="checkPermission('createOrg')"><a ui-sref="organization/add" ui-sref-opts="{ reload:true }">Add organizations</a></li>
+							</ul>
+						</div>
+						<!-- <div >
+							<ul ng-if="userHasAnyOfPermissions('queryRequest', 'createRequest')">
+								<li class="md-title">Request Management</li>
+								<li><a ui-sref="inspection-request/search/basic" ui-sref-opts="{ reload:true }">Search requests</a></li>
+								<li><a ui-sref="inspection-request/add" ui-sref-opts="{ reload:true }">Add request</a></li>
+							</ul>
+							<ul ng-if="userHasAnyOfPermissions('queryOrg', 'createOrg')">
+								<li class="md-title">Organization Management</li>
+								<li><a ui-sref="organization/search" ui-sref-opts="{ reload:true }">Search organizations</a></li>
+								<li><a ui-sref="organization/add" ui-sref-opts="{ reload:true }">Add organizations</a></li>
+							</ul>
+						</div> -->
+					</span>
+				</li>
+			</ul>
+		</div>
+		<form class="form-inline">
+			<i class="fa fa-search iconc" aria-hidden="true"></i>
+		</form>
+		<form class="form-inline">
+			<!-- <input class="form-controls mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+			<input class="form-controls custom-h mr-sm-2"
+				style="color:rgba(255, 255, 255, 1);border-color:rgba(255, 255, 255, 1);border-top: none; border-left: none; border-right: none;"
+				type="search" placeholder="Search" aria-label="Search">
 
-    </form>
-    <form class="form-inline" (click)="logout()">
-      <i class="fa fa-user iconc" aria-hidden="true"></i>
-    </form>
+		</form>
+		<form class="form-inline" (click)="logout()">
+			<i class="fa fa-user iconc" aria-hidden="true"></i>
+		</form>
 
 
 
-  </div>
+	</div>
+</nav>

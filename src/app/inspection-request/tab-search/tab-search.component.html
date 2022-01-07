@@ -1,0 +1,273 @@
+<div>
+	<div id="tab-group">
+		<ul role="tabgroup" class="tabs-menu noselect">
+			<li class="tab-selected"
+				ui-sref="inspection-request/search/basic"
+				role="tab"
+			>
+			<a href="#" ui-sref="inspection-request/search/basic">Basic Search</a>
+			</li>
+			<li ng-class="{'tab-selected'($index)}"
+				ui-sref="inspection-request/search/advanced"
+				role="tab"
+			>
+			<a href="#" ui-sref="inspection-request/search/advanced">Advanced Search</a>
+			</li>
+		</ul>
+		<div role="tabpanel" id="search-container" ui-view="">
+		</div>
+	</div>
+</div>
+
+<!-- <form ng-submit="performSearch()" class="search" layout="column">
+	<div>
+		<label for="basic-search-input">
+		</label>
+		<input
+			type="search"
+			placeholder="Enter VIN, Phone, Conf#, Account, Dealer Name or Lessee Name"
+			id="basic-search-input"
+		>
+	</div>
+	<div layout="row" layout-wrap layout-gt-sm="row" layout-align="space-between start">
+		<button md-button class="md-raised md-primary" type="submit" id="submit">
+			Search
+		</button>
+	</div>
+</form>
+<div id="search-results-container" ui-view=""></div> -->
+
+<!-- <form ng-submit="onSubmitClicked()">
+	<section layout="column" class="advanced-search-fields">
+
+		<div layout="row" class="vin-row" layout-align="space-between start">
+			<label for="vin-input" class="input-label-md-input">VIN(s)</label>
+			<div class="input-column" layout="column" flex>
+				<md-input-container md-no-float>
+					<textarea ng-model="parameters.vin" placeholder="Enter VIN(s)" type="text" id="vin-input" autofocus="true"></textarea>
+				</md-input-container>
+			</div>
+			<div layout="column" flex>
+				<label class="hint">(Tip: you can use either a comma or a space to add multiple VINs)</label>
+			</div>
+		</div>
+
+		<div layout="row" layout-align="space-between start">
+			<label for="dealer-name-input" class="input-label-md-input">Dealer Name</label>
+			<md-input-container md-no-float flex>
+				<input ng-model="parameters.dealerName" placeholder="Dealer Name" type="text" id="dealer-name-input">
+			</md-input-container>
+		</div>
+
+		<div layout="row" layout-align="space-between start">
+			<label for="first-name-input" class="input-label-md-input">Contact Name</label>
+			<div layout="column" flex>
+				<md-input-container md-no-float>
+					<input ng-model="parameters.firstName" placeholder="First Name" type="text" id="first-name-input">
+				</md-input-container>
+				<md-input-container md-no-float>
+					<input ng-model="parameters.lastName" placeholder="Last Name" type="text">
+				</md-input-container>
+			</div>
+		</div>
+
+		<div layout="row" layout-align="space-between start">
+			<label for="tel-input" class="input-label-md-input">Phone</label>
+			<md-input-container md-no-float flex>
+				<input crm-tel-auto-format ng-model="parameters.phone" placeholder="(XXX) XXX - XXXX" type="tel" id="tel-input">
+			</md-input-container>
+		</div>
+
+		<div layout="row" layout-align="space-between start">
+			<label for="country-input" class="input-label-md-select">Country</label>
+			<md-input-container md-no-float flex>
+				<md-select flex placeholder="Country" ng-model="parameters.country" ng-change="updateStates()" id="country-input">
+					<md-option ng-repeat="(key, value) in ::COUNTRIES track by key" ng-value="key">
+						{{::value.name}} - {{::key}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+
+		<div layout="row" layout-align="space-between start">
+			<label for="state-input" class="input-label-md-select">State</label>
+			<md-input-container md-no-float flex>
+				<md-select flex placeholder="State" ng-model="parameters.state" ng-disabled="!parameters.country" id="state-input">
+					<md-option ng-repeat="(key, value) in COUNTRIES[parameters.country].states" ng-value="key">
+						{{value.name}} - {{key}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+
+		<div layout="row" layout-align="space-between start">
+			<label for="status-input" class="input-label-md-select">Status</label>
+			<md-input-container md-no-float flex>
+				<md-select flex placeholder="Status" ng-model="parameters.status" ng-change="updateReasons(); updateActiveRecords()" id="status-input">
+					<md-option ng-repeat="(key, value) in status" value="{{key}}">
+						{{value.name}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+
+		<div layout="row" layout-align="space-between start">
+			<label for="status-input" class="input-label-md-select">Reason</label>
+			<md-input-container md-no-float flex>
+				<md-select flex placeholder="Reason" ng-model="parameters.reasonId" ng-disabled="!parameters.status || !reasons.length" id="reason-input">
+					<md-option ng-repeat="r in reasons" value="{{r.reasonId}}">
+						{{r.reason}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+
+		<div layout="row" layout-align="space-between start">
+			<label for="inspection-type-input" class="input-label-md-select">Inspection Type</label>
+			<md-input-container md-no-float flex>
+				<md-select flex placeholder="Inspection Type" ng-model="parameters.inspectionType" id="inspection-type-input">
+					<md-option ng-repeat="(key, value) in types" value="{{key}}">
+						{{value.name}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+
+		<div layout="row" layout-align="space-between start">
+			<label for="customer-input" class="input-label-md-select">Customer</label>
+			<md-input-container md-no-float flex>
+				<md-select flex placeholder="Customer" ng-model="parameters.customer" id="customer-input">
+					<md-option ng-repeat="customer in customers" value="{{customer.name}}">
+						{{customer.name}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+
+		<div layout="row" layout-align="space-between start">
+			<label for="brand-input" class="input-label-md-select">Brand</label>
+			<md-input-container md-no-float flex>
+				<md-select flex placeholder="Brand" ng-model="parameters.brand" id="brand">
+					<md-option ng-repeat="brand in brands" value="{{brand}}">
+						{{::brand}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+
+
+		<div class="crm-datepicker" layout="row" layout-align="space-between start">
+			<label for="request-date" class="input-label-md-datepicker">Request Date</label>
+			<div layout="column" flex>
+				<md-datepicker
+					id="request-date"
+					ng-model="parameters.requestDate"
+					md-placeholder="MM/DD/YYYY"
+					md-hide-icons="triangle"
+					md-open-on-focus
+				></md-datepicker>
+				<md-datepicker
+					ng-model="parameters.requestEndDate"
+					md-placeholder="Add End Date"
+					md-hide-icons="triangle"
+					md-open-on-focus
+				></md-datepicker>
+			</div>
+		</div>
+
+		<div class="crm-datepicker" layout="row" layout-align="space-between start">
+			<label for="appointment-date" class="input-label-md-datepicker">Appointment Date</label>
+			<div layout="column" flex>
+				<md-datepicker
+					id="appointment-date"
+					ng-model="parameters.appointmentStartDate"
+					md-placeholder="MM/DD/YYYY"
+					md-hide-icons="triangle"
+					md-open-on-focus
+				></md-datepicker>
+				<md-datepicker
+					ng-model="parameters.appointmentEndDate"
+					md-placeholder="Add End Date"
+					md-hide-icons="triangle"
+					md-open-on-focus
+				></md-datepicker>
+			</div>
+		</div>
+
+		<div class="crm-datepicker" layout="row" layout-align="space-between start">
+			<label for="maturity-date" class="input-label-md-datepicker">Maturity Date</label>
+			<div layout="column" flex>
+				<md-datepicker
+					id="maturity-date"
+					ng-model="parameters.maturityStartDate"
+					md-placeholder="MM/DD/YYYY"
+					md-hide-icons="triangle"
+					md-open-on-focus
+				></md-datepicker>
+				<md-datepicker
+					ng-model="parameters.maturityEndDate"
+					md-placeholder="Add End Date"
+					md-hide-icons="triangle"
+					md-open-on-focus
+				></md-datepicker>
+			</div>
+		</div>
+
+		<div layout="row" layout-align="space-between start">
+			<label for="appointment-status" class="input-label-md-select">Appointment Status</label>
+			<md-input-container md-no-float flex>
+				<md-select flex placeholder="Appointment Status" ng-model="parameters.appointmentStatus" id="appointment-status">
+					<md-option ng-repeat="(key, value) in ::appointmentStatus track by key" ng-value="key">
+						{{::value.name}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+
+		<div layout="row" layout-align="space-between start">
+			<label for="assigned-engineer" class="input-label-md-select">Assigned Engineer</label>
+			<md-input-container md-no-float flex>
+				<md-select flex placeholder="Assigned Engineer" ng-model="parameters.assignedEngineer" id="assigned-engineer">
+					<md-option ng-repeat="engineer in engineers track by engineer.key" ng-value="engineer.key">
+						{{engineer.name}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+
+		<div layout="row" layout-align="space-between start">
+			<label for="isExpedite" class="input-label-md-select">Expedite</label>
+			<md-input-container md-no-float flex>
+			<md-select ng-model="parameters.isExpedite" placeholder="" id="isExpedite">
+				<md-option ng-value="true">Yes</md-option>
+				<md-option ng-value="false">No</md-option>
+			</md-select>
+			</md-input-container>
+		</div>
+
+
+		<div layout="row" layout-align="space-between start">
+			<label for="created-by-input" class="input-label-md-input">Created By</label>
+			<md-input-container md-no-float flex>
+				<input ng-model="parameters.createdBy" placeholder="Created By" type="text" id="created-by-input">
+			</md-input-container>
+		</div>
+
+		<br>
+		<div layout="row" layout-align="space-between end">
+			<md-checkbox class="md-primary" ng-model="parameters.activeRecordsOnly" ng-true-value="'true'" ng-false-value="'false'" aria-label="Active Records Only">
+				Active Records Only
+			</md-checkbox>
+		</div>
+	</section>
+
+	<section layout="row" layout-align="end center">
+		<md-button class="md-raised"  ng-click="onResetClicked()" type="button" id="reset">
+			Reset
+		</md-button>
+		<md-button class="md-raised md-primary" ng-click="onEnterPressed()" ng-disabled="parameters.query == ''" type="submit" id="submit">
+			Search
+		</md-button>
+	</section>
+</form>
+<div id="search-results-container" ui-view=""></div> -->

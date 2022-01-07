@@ -1,1 +1,12 @@
-<router-outlet></router-outlet>
+<div class="global-container light-background">
+	<app-header class="dark-background" layout="column" ui-view="global-header"></app-header>
+
+	<div id="content-container" layout="column">
+		<router-outlet></router-outlet>
+	</div>
+	<!-- <div ui-view="organization/details"></div> -->
+
+	<app-footer class="global-footer">
+		<p layout="row" layout-align="center center">AiM AM v{{appVersion}} {{environment}} &copy; Copyright {{footerYear | date:"yyyy"}} - Alliance Inspection Management. All Rights Reserved.</p>
+	</app-footer>
+</div>

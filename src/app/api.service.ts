@@ -7,7 +7,7 @@ declare var $: any;
 })
 export class ApiService {
   // public static HOST_URL: string = "http://31.220.59.174:3500";
-  public static HOST_URL: string = "http://localhost:3500";
+  public static HOST_URL: string = "https://aimadmin-dev.aiminspect.com";
 
   constructor(
     private http: HttpClient,
@@ -22,7 +22,6 @@ export class ApiService {
       'Content-Type': 'application/x-www-form-urlencoded',
     })
   };
-
-  public static saveLoginURL: string = ApiService.HOST_URL + '/admin/login';
-
+  
+  public static saveLoginURL: string = ApiService.HOST_URL + '/login';
 }

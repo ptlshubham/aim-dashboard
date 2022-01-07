@@ -1,0 +1,108 @@
+<app-globalheader></app-globalheader>
+
+<div class="row">
+  <div class="state-button-container" layout="row" layout-align="space-between end" style="padding-top:5%;">
+   <div class="col-md-4">
+    <div layout="column" flex-grow="20">
+      <mat-form-field class="no-line">
+        <mat-label style="color: black;">Showing:</mat-label>
+        <mat-select [formControl]="state" multiple>
+          <mat-option *ngFor="let s of states" [value]="s.title">{{s.name}} - {{s.title}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+   </div>
+   
+
+    <div class="col-4">
+      <div class="last-refreshed-at" layout="column" layout-align="end" flex="60">
+        <div layout="row" layout-align="space-between center">
+          <span>Last updated: </span>
+          <mat-icon style="font-size: 20px !important;">refresh</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-md-1">
+
+  </div>
+  <div class="col-md-10">
+    <div id="dashboard" layout="column">
+      <div id="icon-container">
+        <div class="dashboard-container">
+          <div class="dashboard-box-container">
+            <div class="wrapper">
+              <div class="icon-wrapper-shadow"></div>
+              <div class="icon-wrapper open-requests">
+                <mat-icon style=" font-size: 40px !important;"> format_list_bulleted</mat-icon>
+              </div>
+              <div class="dashboard-box">
+                <div class="dashboard-label open-requests">
+                  Open Requests
+                </div>
+                <div class="dashboard-count">100</div>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-box-container">
+            <div class="wrapper">
+              <div class="icon-wrapper-shadow"></div>
+              <div class="icon-wrapper overdue">
+                <mat-icon style=" font-size: 40px !important;"> assignment_late</mat-icon>
+              </div>
+              <div class="dashboard-box">
+                <div class="dashboard-label overdue">
+                  Over Due
+                </div>
+                <div class="dashboard-count">100</div>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-box-container">
+            <div class="wrapper">
+              <div class="icon-wrapper-shadow"></div>
+              <div class="icon-wrapper due-today">
+                <mat-icon style=" font-size: 40px !important;"> notifications_active</mat-icon>
+              </div>
+              <div class="dashboard-box">
+                <div class="dashboard-label due-today">
+                  Due Today
+                </div>
+                <div class="dashboard-count">100</div>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-box-container">
+            <div class="wrapper">
+              <div class="icon-wrapper-shadow"></div>
+              <div class="icon-wrapper awaiting-on-hold">
+                <mat-icon style=" font-size: 40px !important;"> gavel</mat-icon>
+              </div>
+              <div class="dashboard-box">
+                <div class="dashboard-label awaiting-on-hold">
+                  Awaiting
+                </div>
+                <div class="dashboard-count">100</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="dashboard-results-container" ui-view="">
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+<app-footer></app-footer>

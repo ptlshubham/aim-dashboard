@@ -1,0 +1,328 @@
+::ng-deep .no-line .mat-form-field-underline {
+	display: none !important;
+  }
+  
+  $primary-1: #253266;
+  /* Header, Footer, Icons, Tabs, Cards, Text */
+  $primary-2: #2f3a81;
+  /* Dialogs, Text field - focused */
+  $primary-3: #3c5497;
+  /* Sub-title-hover */
+  $primary-4: #96a6cb;
+  $primary-5: #c5d0e8;
+  
+  /* Buttons-hover, Tabs-hover */
+  $secondary-1: #cb932e;
+  /* Buttons, Tabs, Text */
+  $secondary-2: #dba53b;
+  $secondary-3: #dbb26a;
+  $secondary-4: #e5c697;
+  /* Data header row */
+  $secondary-5: #eadbc3;
+  
+  /* Text colors: */
+  /* Dark text on light background */
+  /* Title, Primary text */
+  $dark-color-1: rgba(0, 0, 0, 0.87);
+  /* Hint text, Icons */
+  $dark-color-2: rgba(0, 0, 0, 0.54);
+  /* Disabled text */
+  $dark-color-3: rgba(0, 0, 0, 0.38);
+  /* Dividers */
+  $dark-color-4: rgba(0, 0, 0, 0.12);
+  
+  /* White text on dark background */
+  /* Title, Primary text */
+  $white-color-1: rgba(255, 255, 255, 1);
+  /* Hint text, Icons */
+  $white-color-2: rgba(255, 255, 255, 0.7);
+  /* Disabled text */
+  $white-color-3: rgba(255, 255, 255, 0.5);
+  /* Dividers */
+  $white-color-4: rgba(255, 255, 255, 0.21);
+  
+  /* Background colors */
+  $bg-1: #e0e0e0;
+  $bg-2: #f5f5f5;
+  $bg-3: #fcfcfc;
+  $bg-4: white;
+  
+  $overdue: #c2185b;
+  $due-today: #f57c00;
+  $awaiting-on-hold: #5d4037;
+  $open-requests: #1976d2;
+  
+  .state-button-container {
+	position: relative;
+	padding-bottom: 10px;
+	top: -50px;
+  
+	.states-container {
+	  margin: 0;
+	}
+  
+	.last-refreshed-at {
+	  padding: 5px 0;
+  
+	  span {
+		font-size: 14px;
+		color: $dark-color-2;
+		margin-right: 10px;
+	  }
+  
+	  md-icon {
+		margin: inherit;
+  
+		&:focus {
+		  outline: 0;
+		}
+	  }
+	}
+  }
+  
+  .dashboard-search-container {
+	top: -50px;
+  }
+  
+  #dashboard {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	clear: both;
+	padding-top: 15px;
+  
+	.results-legend {
+	  padding-bottom: 0;
+	}
+  
+	md-icon.dashboard-indicator {
+	  margin-left: 20px;
+  
+	  svg {
+		min-height: 25px;
+		min-width: 25px;
+		position: relative;
+		top: -2px;
+	  }
+	}
+  
+	md-icon.overdue svg {
+	  fill: $overdue;
+	}
+  
+	md-icon.due-today svg {
+	  fill: $due-today;
+	}
+  
+	md-icon.awaiting-on-hold svg {
+	  fill: $awaiting-on-hold;
+	}
+  
+	md-icon.open-requests svg {
+	  fill: $open-requests;
+	}
+  
+	span.dashboard-indicator-label {
+	  font-weight: 500;
+  
+	  &.overdue {
+		color: $overdue;
+	  }
+  
+	  &.due-today {
+		color: $due-today;
+	  }
+  
+	  &.awaiting-on-hold {
+		color: $awaiting-on-hold;
+	  }
+  
+	  &.open-requests {
+		color: $open-requests;
+	  }
+	}
+  
+	#icon-container {
+	  background-color:#f5f5f5;
+	  padding: 0 20px 40px;
+  
+	  .dashboard-box-container {
+		position: relative;
+		width: 25%;
+		float: left;
+		margin-top: 30px;
+  
+		.wrapper {
+		  margin: 0 30px;
+		}
+  
+		&:focus,
+		&:active {
+		  outline: 0;
+		}
+	  }
+  
+	  .dashboard-box {
+		box-shadow: 2px 2px 2px #cfcfcf;
+		height: 100px;
+		background-color: white;
+		position: relative;
+		overflow: hidden;
+		outline: 0;
+	  }
+  
+	  .icon-wrapper-shadow {
+		position: absolute;
+		box-shadow: 2px 2px 2px #cfcfcf;
+		height: 60px;
+		width: 60px;
+		left: 15px;
+		top: 20px;
+	  }
+  
+	  .icon-wrapper {
+		z-index: 1;
+  
+		&.overdue {
+		  background-color: $overdue;
+		}
+  
+		&.due-today {
+		  background-color: $due-today;
+		}
+  
+		&.awaiting-on-hold {
+		  background-color: $awaiting-on-hold;
+		}
+  
+		&.open-requests {
+		  background-color: $open-requests;
+		}
+  
+		height: 60px;
+		width: 60px;
+		position: absolute;
+	   
+		padding-left: 10px !important;
+		padding-top: 10px;
+		color: white;
+		padding-bottom: 10px;
+		padding-right: 10px;
+  
+		md-icon {
+		  width: 60px;
+		  height: 60px;
+		  outline: 0;
+  
+		  svg {
+			height: 40px;
+			width: 40px;
+			float: left;
+			fill: white;
+			padding: 10px;
+		  }
+		}
+	  }
+  
+	  .dashboard-label {
+		&.overdue {
+		  color: $overdue;
+		}
+  
+		&.due-today {
+		  color: $due-today;
+		}
+  
+		&.awaiting-on-hold {
+		  color: $awaiting-on-hold;
+		}
+  
+		&.open-requests {
+		  color: $open-requests;
+		}
+  
+		font-size: 14px;
+		font-weight: 500;
+		margin: 25px 0 0 60px;
+  
+		md-icon.dashboard-icon-active {
+		  height: 15px;
+		  width: 15px;
+		  min-height: 15px;
+		  min-width: 15px;
+		  position: absolute;
+		  top: 1px;
+		  right: -20px;
+  
+		  svg {
+			fill: $dark-color-3;
+		  }
+		}
+	  }
+  
+	  .dashboard-count {
+		font-size: 26px;
+		margin: 5px 0 0 60px;
+	  }
+  
+	  .dashboard-number-of-results {
+		font-size: 32px;
+	  }
+	}
+  }
+  
+  .dashboard-search {
+	table tr th.row-confirmation-number {
+	  width: 8%;
+	}
+  
+	table tr th.row-status {
+	  width: 7%;
+	}
+  
+	table tr th.row-type {
+	  width: 6%;
+	}
+  
+	table tr th.row-customer {
+	  width: 10%;
+	}
+  
+	table tr th.row-name {
+	  width: 14%;
+	}
+  
+	table tr th.row-vin {
+	  width: 10%;
+	}
+  
+	table tr th.row-city {
+	  width: 15%;
+	}
+  
+	table tr th.row-state {
+	  width: 7%;
+	}
+  
+	table tr th.row-request-date {
+	  width: 11%;
+	}
+  
+	table tr th.row-sla-date {
+	  width: 11%;
+	}
+  }
+  
+  md-select-menu md-content md-option[selected],
+  md-select-menu md-content md-option[selected]:focus {
+	color: $dark-color-1;
+  }
+  
+  .md-checkbox-enabled[selected] .md-icon {
+	background-color: $dark-color-1;
+  }
+  .example-additional-selection {
+	opacity: 0.75;
+	font-size: 0.75em;
+  }
